@@ -63,7 +63,7 @@
         "exec": "~/.config/waybar/scripts/swaync_look.sh",
         "on-click": "sleep 0.1; swaync-client -t -sw",
         "on-click-right": "swaync-client -C",
-        "interval": 1
+        "interval": 2
     },
 
     "backlight": {
@@ -81,11 +81,14 @@
             "warning": 30,
             "critical": 20
         },
-        "format": "{icon} {capacity}%",
+        "format": "{icon}",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
-        "format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        "format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip": true,
+        "tooltip-format": "Batería: {capacity}%\nTiempo restante: {time}"
+
     },
 
     "pulseaudio": {
